@@ -1,7 +1,7 @@
 import axios from 'axios'
 import router from '@/router'
 
-const my_token ="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";
+const my_token ="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";
 
 const api = axios.create({
   baseURL: 'https://api.github.com',
