@@ -1,15 +1,12 @@
 import axios from 'axios'
 import router from '@/router'
 
-const my_token ="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";
-
 const api = axios.create({
   baseURL: 'https://api.github.com',
   timeout: 10000, // indicates 10000ms
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'Authorization': `token ${my_token}` 
   }
 })
 
