@@ -1,7 +1,7 @@
 <template>
   <div class="user-detail-wrapper">
     <div class="back-btn">
-      <button @click="$router.back()">back</button>
+      <button class="gg-arrow-left" @click="$router.back()"></button>
     </div>
     <div class="user-detail">
       <div class="user-image">
@@ -53,6 +53,49 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  .user-detail-wrapper{
+    position: relative;
+  }
+  .back-btn{
+    position: absolute;
+    top:3.5%;
+    left:3%;
+    .gg-arrow-left {
+      box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 35px;
+    height: 35px;
+    background: black;
+    color: #fff;
+    padding: 0;
+    border-radius: 50%;
+}
+.gg-arrow-left::after,
+.gg-arrow-left::before {
+  content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 8px;
+}
+.gg-arrow-left::after {
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    bottom: 11px
+}
+.gg-arrow-left::before {
+  width: 16px;
+    height: 2px;
+    bottom: 14px;
+    background: #fff;
+}
+
+  }
 .user-detail {
   padding: 20px;
   .user-image {
